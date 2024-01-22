@@ -1,0 +1,35 @@
+---
+import { Image } from 'astro:assets';
+
+---
+
+  <div class="w-full py-[100px] donate-section ">
+    <div class="flex flex-col items-center justify-around w-[80%] mx-auto">
+      <div class=" flex gap-10  py-10">
+        <div class="w-1/2">
+          <h3 class="text-[3vw] text-blue font-thin text-center">Support Urvashi Foundation</h3>
+          <p class="text-[1vw] text-gray-dark text-center">
+            Propelling Education in India through our professional administration and established network is our constant endeavour.
+          </p>
+        </div>
+        <div class="w-1/2">
+          <h3 class="text-[3vw] text-blue font-thin text-center">Donate</h3>
+          <p class="text-[1vw] text-gray-dark text-center">
+            We look forward to your generous donation which will help us transform the future of children in India. 
+          </p>
+          <p class="text-[1vw] text-gray-dark text-center">
+            Currently we have 5 projects running in 3 states of India. We plan to make a difference to more than 1,00,000 children year on year with your support.
+          </p>
+        </div>
+      </div>
+      <a href="#" class=" text-[3vw]  md:text-[1vw] border-2 px-3 py-1 md:px-6 md:py-2 hover:bg-yellow hover:text-dark-blue rounded-full border-dark-blue leading-5 m-0  text-dark-blue font-extrabold">
+        <span>Donate </span>
+    </a>
+    </div>
+  </div>
+
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  gsap.registerPlugin(ScrollTrigger);
+</script>

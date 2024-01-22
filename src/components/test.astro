@@ -1,0 +1,115 @@
+---
+import { Image } from 'astro:assets';
+import r1c1 from '../images/r1-c1.jpg';
+import r1c2 from '../images/r1-c2.jpg';
+import r1c3 from '../images/r1-c3.jpg';
+import r1c4 from '../images/r1-c4.jpg';
+import r2c1 from '../images/r2-c1.jpg';
+import r2c2 from '../images/r2-c2.jpg';
+import r2c3 from '../images/r2-c3.jpg';
+import r2c4 from '../images/r2-c4.jpg';
+import r3c1 from '../images/r3-c1.jpg';
+import r3c2 from '../images/r3-c2.jpg';
+import r3c3 from '../images/r3-c3.jpg';
+import r3c4 from '../images/r3-c4.jpg';
+---
+
+
+ 
+<div class="imageSlider h-[100%] w-full flex flex-col justify-center items-center px-3 mt-[50px]">
+    
+    <div class="flex flex-col items-center justify-center  pt-5 text-white w-[100vw] h-[100%] "> 
+      <div class="w-[98%]">
+        <h1 class="text-[7vw] lg:text-[7.3vw]  text-yellow text-justify font-extrabold title">
+          Propelling Education in India 
+        </h1>
+      </div>  
+      <div class="w-[100vw] flex flex-col md:flex-row gap-2 pt-0 mt-0 justify-center">
+        <div class="md:w-[30%] py-2 md:py-5  px-1 md:px-5 ">
+          <h1 class="text-[4vw] leading-[4vw] md:text-[2vw] md:leading-[2vw] text-dark-blue text-left font-bold mainHead">
+            through our professional administration and established network is our constant endeavour.
+          </h1>
+          <p class="text-[2vw] leading-[2vw] md:text-[1vw] md:leading-[1.2vw] mt-2 lg:mt-10 text-dark-blue text-left font-light mainHead">
+            Urvashi Foundation is a non-profit organization with the aim to educate and provide an opportunity to the children across India to learn and excel. Every child deserves a chance to thrive and it is our constant endeavour at Urvashi Foundation to identify and support under-privileged schools, by providing them with the resources that they need. Our aim is to improve the quality of education in India.
+          </p>
+          <p class="text-[2vw] leading-[2vw] md:text-[1vw] md:leading-[1.2vw] mt-2 lg:mt-10 text-dark-blue text-left font-light mainHead">
+            We work in collaboration with the government, local communities, parents, teachers, volunteers, and civil society members to improve the quality of education and to ensure that all children not only attend but also thrive in school.
+          </p>
+          <p class="text-[2vw] leading-[2vw] md:text-[1vw] md:leading-[1.2vw] mt-2 lg:mt-10 text-dark-blue text-left font-light mainHead">
+            100% of the income at Urvashi Foundation is contributed towards welfare of the students through education. Our passionate team of individuals with professional backgrounds monitors and tracks the progress of each school we reach out to.
+          </p>
+        </div>
+        <div class="md:w-[68%] ">
+       
+          <div class="flex flex-col w-[100%] overflow-hidden">
+            <div class="flex  h-[33.33%]">
+              <Image src={r1c1} alt="The Tech Crew"  class=" slideImage imgAnim"/>
+              <Image src={r1c2} alt="The Tech Crew"  class=" slideImage imgAnim"/>
+              <Image src={r1c3} alt="The Tech Crew"  class=" slideImage imgAnim"/>
+              <Image src={r1c4} alt="The Tech Crew"  class=" slideImage imgAnim"/>
+    
+            </div>
+            <div class="flex  h-[33.33%]">
+              <Image src={r2c1} alt="The Tech Crew"  class=" slideImage imgAnim"/>
+              <Image src={r2c2} alt="The Tech Crew"  class=" slideImage imgAnim"/>
+              <Image src={r2c3} alt="The Tech Crew"  class=" slideImage imgAnim"/>
+              <Image src={r2c4} alt="The Tech Crew"  class=" slideImage imgAnim"/>
+            </div>
+            <div class="flex  h-[33.34%]">
+              <Image src={r3c1} alt="The Tech Crew"  class=" slideImage imgAnim"/>
+              <Image src={r3c2} alt="The Tech Crew"  class=" slideImage imgAnim"/>
+              <Image src={r3c3} alt="The Tech Crew"  class=" slideImage imgAnim"/>
+              <Image src={r3c4} alt="The Tech Crew"  class=" slideImage imgAnim"/>
+            </div> 
+          </div>
+        </div>
+        
+      </div>
+    </div>
+</div>  
+
+<script>
+
+
+import { gsap } from "gsap";
+const ImgAnim = document.querySelectorAll('.imgAnim');
+const mainHead =document.querySelectorAll('.mainHead')
+const title =document.querySelector('.title') ;
+
+
+
+var tl = gsap.timeline();
+tl.from(title,{
+  xPercent: 500,
+    duration: 1,
+    ease: "power4.out",
+    // delay: index * 1
+    stagger: 0.2,
+}
+)
+tl.from(mainHead,{
+  xPercent: -500,
+  opacity:0,
+  duration:1,
+  zIndex:-9,
+  stagger:0.5,
+  ease:"power1.out"
+}
+)
+
+
+
+
+var tl1 = gsap.timeline({repeat:-1, repeatDelay: 1, yoyo: true});
+ImgAnim.forEach(elem => {
+  tl1
+  .to(elem,{
+      opacity:1,
+      duration:1,
+  })
+});
+
+
+
+
+</script>

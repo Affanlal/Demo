@@ -1,0 +1,55 @@
+
+---
+import { Icon } from 'astro-icon'
+---
+<div class="h-[50px] w-[50px] group  relative">
+    <div  class="   text-white  cursor-pointer group-hover:opacity-0">
+        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"><g transform="translate(24 0) scale(-1 1)"><path fill="currentColor" d="M10 18q-.425 0-.713-.288T9 17q0-.425.288-.713T10 16h10q.425 0 .713.288T21 17q0 .425-.288.713T20 18H10Zm0-5q-.425 0-.713-.288T9 12q0-.425.288-.713T10 11h10q.425 0 .713.288T21 12q0 .425-.288.713T20 13H10ZM4 8q-.425 0-.713-.288T3 7q0-.425.288-.713T4 6h16q.425 0 .713.288T21 7q0 .425-.288.713T20 8H4Z"/></g></svg>
+    </div>
+    <div id="menuToggle" class="menuToggle text-white cursor-pointer absolute top-0 opacity-0 group-hover:opacity-100">
+        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"><path fill="currentColor" d="M4 18q-.425 0-.713-.288T3 17q0-.425.288-.713T4 16h16q.425 0 .713.288T21 17q0 .425-.288.713T20 18H4Zm0-5q-.425 0-.713-.288T3 12q0-.425.288-.713T4 11h16q.425 0 .713.288T21 12q0 .425-.288.713T20 13H4Zm0-5q-.425 0-.713-.288T3 7q0-.425.288-.713T4 6h16q.425 0 .713.288T21 7q0 .425-.288.713T20 8H4Z"/></svg>
+    </div>
+</div>
+<div id="mainMenu" class="hidden flex-col w-[95vw]  lg:w-[300px]  bg-dark-blue   rounded-lg gap-2 items-start p-3 text-white justify-start   absolute top-3 lg:top-8 left-0 opacity-0">
+    <div class="flex justify-between gap-1 w-[100%]">
+        <div class="flex flex-col gap-2 text-[1.5vw] lg:text-[1vw]">
+            <a class="hoverLink" href="/">Home</a>
+            <a class="hoverLink" href="/trustees">Trustees</a>
+            <a class="hoverLink" href="/ourteam">Our Team</a>
+            <a class="hoverLink" href="/council">Council</a>
+            <a class="hoverLink" href="/what-we-do">What We Do</a>
+            <a class="hoverLink" href="/contact-us">Contact us</a>
+        </div>
+        <div>
+            <span id="menuClose" class="bg-white rounded-full font-extrabold text-dark-blue text-1xl py-1 px-2 cursor-pointer hover:bg-yellow">X</span>
+        </div>
+    </div>
+</div>
+
+<script>
+    import { gsap } from "gsap";
+    const menuToggle = document.querySelector('.menuToggle');
+    const menuClose = document.querySelector('#menuClose');
+    const mainMenu = document.querySelector('#mainMenu');
+    menuToggle?.addEventListener('click', () => {
+        let tl = gsap.timeline();
+        tl.to(mainMenu,{
+            display:'flex',
+            opacity:1,
+            x:0,
+            y:0,
+            duration:0.5,
+            stagger:0.3
+        })
+    });
+    menuClose?.addEventListener('click', () => {
+        let tl = gsap.timeline();
+        tl.to(mainMenu,{
+            display:'none',
+            opacity:0,
+            duration:0.5,
+            stagger:0.3
+        })
+    });
+
+</script>

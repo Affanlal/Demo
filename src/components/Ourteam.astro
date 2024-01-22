@@ -1,0 +1,44 @@
+---
+import { Image } from 'astro:assets';
+import arpitamukherjee from '../images/arpitamukherjee.jpg';
+import jessievas from '../images/jessievas.jpg';
+import yolandeperriera from '../images/yolandeperriera.jpg';
+import punmidesai from '../images/punmidesai.jpg';
+import abhishekbajaj from '../images/abhishekbajaj.jpg';
+---
+<div class="vertical-section w-full h-screen overflow-hidden flex flex-col items-center md:flex-row md:items-start text-white text-lg" id="sectionThree">
+    <div class="w-1/2 h-screen bg-sky-600 flex flex-col  justify-around items-center p-8">
+      <h2 class="text-[6vw] text-blue font-thin mb-8 section-title ">OUR TEAM</h2>
+      <a href="#" class="flex gap-2 hover:bg-yellow rounded-full px-3 py-1 btnRead">
+        <span class="text-dark-blue text-[14px] md:text-[20px]">Read more</span>
+        <svg class="text-dark-blue flex self-center w-[14px] h-[14px] md:w-[20px] md:h-[20px]" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24"><path fill="currentColor" d="M6 12h8.25L11 8.75l.67-.75l4.5 4.5l-4.5 4.5l-.67-.75L14.25 13H6v-1m15 .5a9.5 9.5 0 0 1-9.5 9.5C6.26 22 2 17.75 2 12.5A9.5 9.5 0 0 1 11.5 3a9.5 9.5 0 0 1 9.5 9.5m-1 0A8.5 8.5 0 0 0 11.5 4A8.5 8.5 0 0 0 3 12.5a8.5 8.5 0 0 0 8.5 8.5a8.5 8.5 0 0 0 8.5-8.5Z"/></svg>
+      </a>
+     </div>
+    <div class="w-1/2 p-8">
+      <div class="large-child">
+        <div class="flex flex-col items-center justify-center py-8">
+            <Image src={arpitamukherjee} alt="Arpita Acharya Mukherjee" class="w-[75%]" />
+            <span class="text-[3vw] lg:text-[2vw] text-dark-blue py-3">Arpita Acharya Mukherjee</span>
+        </div>
+        <div class="flex flex-col items-center justify-center py-8">
+            <Image src={jessievas} alt="Jessie Vas" class="w-[75%]" />
+            <span class="text-[3vw] lg:text-[2vw] text-dark-blue py-3">Jessie Vas</span>
+        </div>
+        <div class="flex flex-col items-center justify-center py-8">
+            <Image src={yolandeperriera} alt="Dr. Yolande Perreira" class="w-[75%]" />
+            <span class="text-[3vw] lg:text-[2vw] text-dark-blue py-3">Dr. Yolande Perreira</span>
+        </div>
+        <div class="flex flex-col items-center justify-center py-8">
+            <Image src={punmidesai} alt="Punmi Nagar" class="w-[75%]" />
+            <span class="text-[3vw] lg:text-[2vw] text-dark-blue py-3">Punmi Nagar</span>
+        </div>
+        
+      <div class="flex flex-col items-center justify-center py-8">
+        <Image src={abhishekbajaj} alt="Abhishek Bajaj" class="w-[75%]" />
+        <span class="text-[3vw] lg:text-[2vw] text-dark-blue py-3">Abhishek Bajaj</span>
+      </div>
+      </div>
+    </div>
+</div>
+
+  

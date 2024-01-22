@@ -1,0 +1,85 @@
+---
+import Layout from '../layouts/Layout.astro';
+import HomeSlider from '../components/HomeSlider.astro';
+import Trustees from '../components/Trustees.astro';
+import Council from '../components/Council.astro';
+import Ourteam from '../components/Ourteam.astro';
+import Donate from '../components/Donate.astro';
+---
+
+<Layout title="Urvashi Foundation. Propelling Education in India">
+	<main>
+        <section id="homeSlider" class="bg-blue px-2 py-10 md:py-14 h-full md:h-full ">
+			<HomeSlider/>
+		</section>
+		<section id="homeTrustees" class=" bg-white ">
+			<Trustees/>
+			
+		</section>
+		<section id="homeCouncil" class=" bg-gray-light ">
+			<Council/>
+		</section>
+        <section id="ourteam" class=" bg-white ">
+			<Ourteam/>
+		</section>
+        <section id="donate" class="bg-gray-light ">
+			<Donate/>
+		</section>
+	</main>
+</Layout>
+
+<script>
+    import { gsap } from "gsap";
+    import { ScrollTrigger } from "gsap/ScrollTrigger";
+    gsap.registerPlugin(ScrollTrigger);
+
+    const sections = gsap.utils.toArray(".vertical-section");
+    const donateSection = document.querySelector('.donate-section')
+
+    const tl = gsap.timeline();
+    
+
+    sections.forEach((section) => {
+    const large = section.querySelector(".large-child");
+    const sectionTitle = section.querySelector('.section-title');
+    const btnRead = section.querySelector('.btnRead');
+    gsap.from(sectionTitle,{
+        xPercent:-400,
+        opacity:1,
+        ease:'power1.out',
+        duration:0.5,
+        scrollTrigger:{
+            trigger: sectionTitle,
+            toggleActions:"restart none none none"
+        }
+    })
+
+	gsap.from(btnRead,{
+        yPercent:-900,
+        opacity:1,
+        ease:'power1.out',
+        duration:1,
+		delay:0.2,
+        scrollTrigger:{
+            trigger: btnRead,
+            toggleActions:"restart none none none"
+        }
+    })
+    gsap.to(large, {
+        y: () => (window.innerHeight - large.clientHeight - 64),
+        duration:0.1,
+        ease: "power1.out",
+        scrollTrigger: {
+        trigger: section,
+        pin: true,
+        start: "top 10%",
+        end: () => "+=1000",
+        scrub: 0.5,
+        markers: false,
+        
+    }
+  });
+});
+
+
+  </script>

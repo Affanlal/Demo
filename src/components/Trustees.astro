@@ -1,0 +1,38 @@
+---
+import { Image } from 'astro:assets';
+import jairajthacker from '../images/jairajcthacker.jpg';
+import urvashithacker from '../images/urvashithacker.jpg';
+import sujaythacker from '../images/sujaythacker.jpg';
+import minalthacker from '../images/minalthacker.jpg';
+---
+<div class="vertical-section verticalSection flex-col" id="sectionOne">
+    <div class="desgSection ">
+      <h2 class="text-[6vw] text-blue font-thin mb-8 section-title ">TRUSTEES</h2>
+      <a href="#" class="flex gap-2 hover:bg-yellow rounded-full px-3 py-1 btnRead">
+        <span class="text-dark-blue text-[14px] md:text-[20px]">Read more</span>
+        <svg class="text-dark-blue flex self-center w-[14px] h-[14px] md:w-[20px] md:h-[20px]" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24"><path fill="currentColor" d="M6 12h8.25L11 8.75l.67-.75l4.5 4.5l-4.5 4.5l-.67-.75L14.25 13H6v-1m15 .5a9.5 9.5 0 0 1-9.5 9.5C6.26 22 2 17.75 2 12.5A9.5 9.5 0 0 1 11.5 3a9.5 9.5 0 0 1 9.5 9.5m-1 0A8.5 8.5 0 0 0 11.5 4A8.5 8.5 0 0 0 3 12.5a8.5 8.5 0 0 0 8.5 8.5a8.5 8.5 0 0 0 8.5-8.5Z"/></svg>
+      </a>
+     </div>
+    <div class="w-full md:w-1/2 ">
+      <div class="large-child">
+        <div class="flex flex-col items-center justify-center py-12 md:py-8">
+            <Image src={jairajthacker} alt="Jairaj Thacker" class="w-[90%] md:w-[75%]" />
+            <span class="text-[6vw] lg:text-[2vw] text-dark-blue py-3">Jairaj Thacker</span>
+        </div>
+        <div class="flex flex-col items-center justify-center py-24 md:py-8">
+            <Image src={urvashithacker} alt="Urvashi Thacker" class="w-[90%] md:w-[75%]" />
+            <span class="text-[6vw] lg:text-[2vw] text-dark-blue py-3">Urvashi Thacker</span>
+        </div>
+        <div class="flex flex-col items-center justify-center py-24 md:py-8">
+            <Image src={sujaythacker} alt="Sujay Thacker" class="w-[90%] md:w-[75%]" />
+            <span class="text-[6vw] lg:text-[2vw] text-dark-blue py-3">Sujay Thacker</span>
+        </div>
+        <div class="flex flex-col items-center justify-center py-24 md:py-8">
+            <Image src={minalthacker} alt="Minal Thacker" class="w-[90%] md:w-[75%]" />
+            <span class="text-[6vw] lg:text-[2vw] text-dark-blue py-3">Minal Thacker</span>
+        </div>
+      </div>
+    </div>
+</div>
+
+  

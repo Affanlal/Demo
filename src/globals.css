@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.slideImage {
+    @apply  opacity-50 p-1 md:p-3 w-[25%];
+  }
+
+.hoverLink{
+  @apply  lg:hover:text-3xl hover:animate-bounce 
+}
+
+.verticalSection{
+  @apply w-full h-screen overflow-hidden flex  items-center md:flex-row md:items-start text-white text-lg
+}
+
+.desgSection{
+  @apply w-full  md:w-1/2 h-screen  flex flex-col  md:justify-around items-center p-1 md:p-8 bg-white z-10
+}
+
+.desgSectionGray{
+  @apply w-full  md:w-1/2 h-screen  flex flex-col  md:justify-around items-center p-1 md:p-8 bg-gray-light z-10
+}
